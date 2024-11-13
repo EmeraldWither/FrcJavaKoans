@@ -28,8 +28,10 @@ public class AboutConsoleAndVariables {
      * 
      */
     public static void sayHelloInConsole() {
+        System.out.println("Hello!");
+    } 
+    
 
-    }
 
     /**
      * # Displaying some calculation in the console
@@ -55,7 +57,7 @@ public class AboutConsoleAndVariables {
      * 
      */
     public static void computeTwoAndTwo() {
-
+        System.out.println(2 + 2);
     }
 
     /**
@@ -71,13 +73,17 @@ public class AboutConsoleAndVariables {
      * For example, when the information is an integer number, the type is called 'int'.
      * Putting everything together, if we want to create a variable for the number of legs of a pig:
      * 
+     *      int - whole numbers
+     *      double - decimal numbers
+     *      String - text
+     * 
      *      int pigNbOfLegs = 4;
      *       ^       ^        ^
      *      type   name     value
      * 
      * The value can also be an arithmetic expression. For example:
      * 
-     *      int pigNbOfLegs = 1 + 1 + 1 + 1;
+     *      int pigNbOfLegs = 8/2;
      * 
      * Whenever you use the name of the variable, Java will replace the name with the variable's value when running.
      * For example, if you want to display the variable defined above:
@@ -97,7 +103,8 @@ public class AboutConsoleAndVariables {
      * 4
      */
     public static void createAndDisplayAVariable() {
-
+        int num = 2 + 2;
+        System.out.println(num);
     }
 
     /**
@@ -117,7 +124,8 @@ public class AboutConsoleAndVariables {
      * 
      */
     public static void createAndDisplayAStringVariable() {
-
+        String greeting = "Hello!";
+        System.out.println(greeting);
     }
 
 
@@ -264,6 +272,6 @@ public class AboutConsoleAndVariables {
      * 
      */
     public static void computeAgeIn5YearsConsole() {
-
+        
     }
 }
