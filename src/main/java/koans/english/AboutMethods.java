@@ -26,7 +26,7 @@ public class AboutMethods {
      * 
      */
     public static void computeAgeIn5And10And20YearsConsole() {
-
+        sout();
     }
 
     /**
