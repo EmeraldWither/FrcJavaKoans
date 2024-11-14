@@ -1,5 +1,7 @@
 package koans.english;
 
+import sensei.AboutConsoleAndVariablesKoans;
+
 public class AboutLoops {
     /**
      * # First loop
@@ -33,6 +35,12 @@ public class AboutLoops {
      * 
      */
 
+     public static void helloNTimes(int num) {
+       for(int i = 0; i < num; i++) {
+        System.out.println("Hello");
+       } 
+     }
+
 
      /**
      * # Printing where we are in a loop
@@ -50,6 +58,11 @@ public class AboutLoops {
      * 3
      * 
      */
+    public static void displayNumbers(int num) {
+        for(int i = 0; i < num; i++) {
+            System.out.println(i + 1);
+        }
+    }
 
 
      /**
@@ -68,6 +81,11 @@ public class AboutLoops {
      * 1
      * 
      */
+    public static void displayReverseNumbers(int num) {
+        for(int i = num; i > 0; i--) {
+            System.out.println(i);
+        }
+    }
 
 
      /**
@@ -87,6 +105,12 @@ public class AboutLoops {
      * 28
      * 
      */
+
+     public static void sevens(int num) {
+        for(int i = 7; i <= num; i+=7) {
+            System.out.println(i);
+        }
+     }
 
 
      /**
@@ -115,6 +139,12 @@ public class AboutLoops {
      * 
      */
 
+     public static void sevensOrEights(int num) {
+        for(int i = 7; i <= num; i++) {
+            if(AboutMoreMethods.isMultiple(i, 7) || AboutMoreMethods.isMultiple(i, 8)) System.out.println(i);
+        }
+     }
+
 
      /**
      * # Exponents
@@ -136,6 +166,14 @@ public class AboutLoops {
      * 
      */
 
+     public static int exponent(int base, int exp) {
+        int num = 1;
+        for(int i = 0; i < exp; i++) {
+            num *= base;
+        }
+        return num;
+     }
+
 
      /**
      * # Exponents, including 0
@@ -155,6 +193,15 @@ public class AboutLoops {
      * exponent2(5, 3) should return 125
      * 
      */
+    public static int exponent2(int base, int exp) {
+        if(exp == 0) return 1;
+        int num = 1;
+        for(int i = 0; i < exp; i++) {
+            num *= base;
+        }
+        return num;
+     }
+
 
 
      /**
@@ -176,6 +223,13 @@ public class AboutLoops {
      * factorial(5) should return 120
      * 
      */
+
+     public static int factorial(int num) {
+        for(int i = num - 1; i >= 1; i--) {
+            num *= i;
+        }
+        return num;
+     }
 
 
 }

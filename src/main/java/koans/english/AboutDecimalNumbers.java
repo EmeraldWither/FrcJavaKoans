@@ -4,15 +4,17 @@ public class AboutDecimalNumbers {
     /**
      * # Converting a measure of length
      * 
-     * Write a method named 'toCm' which has a parameter for a number of inches, and returns the conversion in centimeters.
+     * Write a method named 'toCm' which has a parameter for a number of inches, and
+     * returns the conversion in centimeters.
      * 
-     * ---------   TIPS  --------------
+     * --------- TIPS --------------
      * 
-     * This time, the parameter cannot be an integer, because we want to be able to convert fractions of inches as well.
+     * This time, the parameter cannot be an integer, because we want to be able to
+     * convert fractions of inches as well.
      * 
      * In Java, decimal numbers are represented with a type named 'double'. Ex:
      * 
-     *     double pi = 3.14;
+     * double pi = 3.14;
      * 
      * To convert from inches to centimeters, simply multiply by 2.54.
      * 
@@ -24,6 +26,9 @@ public class AboutDecimalNumbers {
      * 
      */
 
+    public static double toCm(double inches) {
+        return inches * 2.54;
+    }
 
     /**
      * # Converting the other way
@@ -38,11 +43,15 @@ public class AboutDecimalNumbers {
      * 
      */
 
+     public static double toInches(double cm) {
+        return cm / 2.54;
+     }
 
     /**
      * # Computing some geometry
      * 
-     * Write a method named 'rectangleArea' which computes the area of a rectangle, given the length of its sides.
+     * Write a method named 'rectangleArea' which computes the area of a rectangle,
+     * given the length of its sides.
      * 
      * -------------------------------
      * 
@@ -52,13 +61,17 @@ public class AboutDecimalNumbers {
      * 
      */
 
+     public static double rectangleArea(double num1, double num2) {
+        return num1 * num2;
+     }
 
-     /**
+    /**
      * # Computing how long a robot is traveling step 1
      * 
-     * Write a method named 'wheelCircumference' which computes the circumference of a robot wheel given the wheel's radius.
+     * Write a method named 'wheelCircumference' which computes the circumference of
+     * a robot wheel given the wheel's radius.
      * 
-     * ---------   TIPS  --------------
+     * --------- TIPS --------------
      * 
      * Use the value 3.14 for pi.
      * 
@@ -69,17 +82,24 @@ public class AboutDecimalNumbers {
      * wheelCircumference(1) should return 6.28
      * 
      */
+    
+     public static double wheelCircumference(double radius) {
+        return 2 * 3.14 * radius;
+     }
 
 
     /**
      * # Computing how long a robot is traveling step 2
      * 
-     * Write a method named 'wheelRotations' which computes the number of rotations of the wheel given the number of rotations of the motor and the gear ratio.
+     * Write a method named 'wheelRotations' which computes the number of rotations
+     * of the wheel given the number of rotations of the motor and the gear ratio.
      * 
-     * ---------   TIPS  --------------
+     * --------- TIPS --------------
      * 
-     * The gear ratio is how many rotations the wheel is turning when the motor rotates once.
-     * For example, if the motor has to turn 5 rotations to make the wheel rotate once, the ratio is 1/5 = 0.2.
+     * The gear ratio is how many rotations the wheel is turning when the motor
+     * rotates once.
+     * For example, if the motor has to turn 5 rotations to make the wheel rotate
+     * once, the ratio is 1/5 = 0.2.
      * 
      * -------------------------------
      * 
@@ -89,17 +109,22 @@ public class AboutDecimalNumbers {
      * 
      */
 
+     public static double wheelRotations(double numOfRotation, double gearRatio) {
+        return numOfRotation * gearRatio;
+     }
 
     /**
      * # Computing how long a robot is traveling final step
      * 
-     * Use the previous 2 methods in a new one named 'toDistance' which computes the distance the wheel traveled given:
+     * Use the previous 2 methods in a new one named 'toDistance' which computes the
+     * distance the wheel traveled given:
      * 
      * - The number of rotations of the motor.
      * - The gear ratio of the gearbox.
      * - The wheel radius.
      * 
-     * Warning! Do not recode the computations already coded in the previous 2 methods. Instead, reuse the previous 2 methods in this one.
+     * Warning! Do not recode the computations already coded in the previous 2
+     * methods. Instead, reuse the previous 2 methods in this one.
      * 
      * -------------------------------
      * 
@@ -109,5 +134,8 @@ public class AboutDecimalNumbers {
      * 
      */
 
-     
+     public static double toDistance(double numOfRotations, double gearRatio, double wheelRadius) {
+        return wheelCircumference(wheelRadius) * wheelRotations(numOfRotations, gearRatio);
+     }
+
 }
